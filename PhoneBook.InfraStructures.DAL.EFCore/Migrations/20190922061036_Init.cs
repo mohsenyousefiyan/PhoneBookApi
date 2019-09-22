@@ -44,7 +44,8 @@ namespace PhoneBook.InfraStructures.DAL.EFCore.Migrations
                 name: "Tbl_PhoneNymberType",
                 columns: table => new
                 {
-                    ID = table.Column<byte>(nullable: false),
+                    ID = table.Column<byte>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     PhoneNymberTypeName = table.Column<string>(maxLength: 50, nullable: false)
                 },
                 constraints: table =>

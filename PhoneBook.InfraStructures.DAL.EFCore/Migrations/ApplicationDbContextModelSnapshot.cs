@@ -125,7 +125,9 @@ namespace PhoneBook.InfraStructures.DAL.EFCore.Migrations
             modelBuilder.Entity("PhoneBook.Core.Entities.Entities.PhoneNymberType", b =>
                 {
                     b.Property<byte>("Id")
-                        .HasColumnName("ID");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("ID")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("PhoneNymberTypeName")
                         .IsRequired()
