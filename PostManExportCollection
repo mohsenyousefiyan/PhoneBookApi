@@ -1,0 +1,407 @@
+{
+	"info": {
+		"_postman_id": "cbcf25af-e5be-4af6-a0dc-43b15b2f3971",
+		"name": "PhoneBook",
+		"description": "# Introduction\nWhat does your API do?\n\n# Overview\nThings that the developers should know about\n\n# Authentication\nWhat is the preferred way of using the API?\n\n# Error Codes\nWhat errors and status codes can a user expect?\n\n# Rate limit\nIs there a limit to the number of requests an user can send?",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PhoneNumberTypeSearch",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "uniqueid",
+						"value": "200",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44356/api/Phonenumbertype/search?ShowPagingView=true&PageSize=2&Page=1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44356",
+					"path": [
+						"api",
+						"Phonenumbertype",
+						"search"
+					],
+					"query": [
+						{
+							"key": "ShowPagingView",
+							"value": "true"
+						},
+						{
+							"key": "PageSize",
+							"value": "2"
+						},
+						{
+							"key": "Page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PhoneNumberTypeGetById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44356/api/Phonenumbertype/getbyid?id=1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44356",
+					"path": [
+						"api",
+						"Phonenumbertype",
+						"getbyid"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PhoneNumberTypeAdd",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"PhoneNumberTypeName\":\"Mobile3\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44356/api/Phonenumbertype/create",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44356",
+					"path": [
+						"api",
+						"Phonenumbertype",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PhoneNumberTypeEdit",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"Id\":6,\"PhoneNumberTypeName\":\"Test\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44356/api/Phonenumbertype/Edit",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44356",
+					"path": [
+						"api",
+						"Phonenumbertype",
+						"Edit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PhoneNumberTypeDelete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"Id\":6}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44356/api/Phonenumbertype/delete",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44356",
+					"path": [
+						"api",
+						"Phonenumbertype",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ContactGetById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:44356/api/Contact/getbyid?id=1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44356",
+					"path": [
+						"api",
+						"Contact",
+						"getbyid"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:44356/api/Contact/getbyid?1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44356",
+							"path": [
+								"api",
+								"Contact",
+								"getbyid"
+							],
+							"query": [
+								{
+									"key": "1",
+									"value": null
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "ContactAdd",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"FirstName\":\"Ahmad\",\n\t\"LastName\":\"Rezai\",\n\t \"contactPhoneNumbers\": [\n    {\n      \"phoneNumber\": \"09124564120\",\n      \"phoneNumberTypeId\": 1\n    },\n    {\n      \"phoneNumber\": \"0217888922\",\n      \"phoneNumberTypeId\": 2\n    }\n  ]\n\t\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44356/api/Contact/create",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44356",
+					"path": [
+						"api",
+						"Contact",
+						"create"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ContactSearch",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44356/api/Contact/search?PhoneNumber=09&ShowPagingView=false",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44356",
+					"path": [
+						"api",
+						"Contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "PhoneNumber",
+							"value": "09"
+						},
+						{
+							"key": "ShowPagingView",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ContactEdit",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Id\":1,\n\t\"FirstName\":\"Amir\",\n\t\"LastName\":\"Rezaie\",\n\t\"Address\":\"Tehran\",\n\t \"contactPhoneNumbers\": [\n    {\n      \"phoneNumber\": \"09124564120\",\n      \"phoneNumberTypeId\": 1\n    },\n    {\n      \"phoneNumber\": \"0217888922\",\n      \"phoneNumberTypeId\": 2\n    }\n  ]\n\t\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44356/api/Contact/edit",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44356",
+					"path": [
+						"api",
+						"Contact",
+						"edit"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
