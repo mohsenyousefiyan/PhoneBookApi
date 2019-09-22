@@ -14,9 +14,12 @@ namespace PhoneBook.InfraStructures.DAL.EFCore.Configs
             builder.ToTable("Tbl_PhoneNymberType");
 
             #region PropertyConfigs
-
+          
+            
             builder.Property(x => x.Id)
-                    .HasColumnName("ID");
+                    .HasColumnName("ID")
+                    .ValueGeneratedOnAdd();
+
 
             builder.Property(x => x.PhoneNymberTypeName)
                 .HasMaxLength(50)
