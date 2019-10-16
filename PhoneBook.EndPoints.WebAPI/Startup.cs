@@ -39,7 +39,7 @@ namespace PhoneBook.EndPoints.WebAPI
             services.AddScoped<IContactRepository, ContactRepository>();
             services.AddScoped<IContactService, ContactService>();
             
-
+            //Add Db
             services.AddDbContext<ApplicationDbContext>(config =>
             {
                 config.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));               
